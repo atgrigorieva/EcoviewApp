@@ -31,7 +31,12 @@ export default class TurningOnB1200Page extends Component {
                     </View>
                 </Content>
                 <Footer>
-                    <Left><Button onPress={() => this.props.navigation.navigate('inspectionOfDevice')}><Text>Начать просмотр заново</Text></Button></Left>
+                    <Left>
+                        <Button transparent onPress={() => this.props.navigation.navigate('MainMenu')}>
+                            <Text>Назад</Text>
+                        </Button>
+                    </Left>
+                    <Body><Button onPress={() => this.props.navigation.navigate('inspectionOfDevice')}><Text>Начать просмотр заново</Text></Button></Body>
                     <Right><Button onPress={() => this.props.navigation.goBack(null)}><Text>К списку презентаций</Text></Button></Right>
                 </Footer>
             </Container>

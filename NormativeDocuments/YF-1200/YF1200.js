@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Text, Icon} from 'native-base';
 import { View, Image, StyleSheet, TextInput, TouchableOpacity, Modal, TouchableHighlight, Alert } from 'react-native';
-import index from "./index.js"
-import TypeApprovalCertificate from "./TypeApprovalCertificate";
+
 
 export default class YF1200 extends Component {
 

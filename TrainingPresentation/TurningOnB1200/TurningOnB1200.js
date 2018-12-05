@@ -15,8 +15,9 @@ export default class TurningOnB1200Page extends Component {
         return(
             <Container>
                 <Header>
+
                     <Body>
-                    <Title>Включение Спектрофотометра В-1200 (ТМ ЭКОВЬЮ)</Title>
+                        <Title>Включение Спектрофотометра В-1200 (ТМ ЭКОВЬЮ)</Title>
                     </Body>
                 </Header>
                 <Content padder >
@@ -30,7 +31,8 @@ export default class TurningOnB1200Page extends Component {
                     </View>
                 </Content>
                 <Footer>
-                    <Left><Button onPress={() => this.props.navigation.navigate('inspectionOfDevice')}><Text>Начать просмотр</Text></Button></Left>
+
+                    <Body><Button onPress={() => this.props.navigation.navigate('inspectionOfDevice')}><Text>Начать просмотр</Text></Button></Body>
                     <Right><Button onPress={() => this.props.navigation.goBack(null)}><Text>К списку презентаций</Text></Button></Right>
                 </Footer>
             </Container>

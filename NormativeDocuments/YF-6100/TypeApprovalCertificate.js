@@ -5,8 +5,8 @@ import Pdf from 'react-native-pdf';
 
 export default class PDFExample extends React.Component {
     render() {
-        const source = {uri:'http://ecoview.ru/images/ecove/doc_pdf/Certificate_of_registration.pdf',cache:true};
-        //const source = require('./test.pdf');  // ios only
+        //const source = {uri:'http://ecoview.ru/images/ecove/doc_pdf/Certificate_of_registration.pdf',cache:true};
+        const source = require('./Certificate_of_registration.pdf');  // ios only
         //const source = {uri:'bundle-assets://test.pdf'};
 
         //const source = {uri:'file:///sdcard/test.pdf'};

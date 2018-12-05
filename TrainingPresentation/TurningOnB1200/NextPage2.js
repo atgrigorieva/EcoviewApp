@@ -71,7 +71,12 @@ export default class NextPage extends Component {
                     </View>
                 </Content>
                 <Footer>
-                    <Left><Button onPress={() => this.props.navigation.navigate('Pass')}><Text>Пропустить</Text></Button></Left>
+                    <Left>
+                        <Button transparent onPress={() => this.props.navigation.navigate('AutomaticHolder')}>
+                            <Text>Назад</Text>
+                        </Button>
+                    </Left>
+                    <Body><Button onPress={() => this.props.navigation.navigate('Pass')}><Text>Пропустить</Text></Button></Body>
                     <Right><Button onPress={() => this.props.navigation.goBack(null)}><Text>К списку презентаций</Text></Button></Right>
                 </Footer>
             </Container>

@@ -70,7 +70,12 @@ export default class FiltersPage extends Component {
                     </View>
                 </Content>
                 <Footer>
-                    <Left><Button onPress={() => this.props.navigation.navigate('AutomaticHolder')}><Text>Автоматический держатель</Text></Button></Left>
+                    <Left>
+                        <Button transparent onPress={() => this.props.navigation.navigate('Lamps')}>
+                            <Text>Назад</Text>
+                        </Button>
+                    </Left>
+                    <Body><Button onPress={() => this.props.navigation.navigate('AutomaticHolder')}><Text>Автоматический держатель</Text></Button></Body>
                     <Right><Button onPress={() => this.props.navigation.goBack(null)}><Text>К списку презентаций</Text></Button></Right>
                 </Footer>
             </Container>

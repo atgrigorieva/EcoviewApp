@@ -1,4 +1,5 @@
 import { DrawerNavigator } from 'react-navigation';
+import presentations from "../presentations.js"
 import turningOnB1200 from "./TurningOnB1200.js"
 import inspectionOfDevice from "./InspectionOfDevice.js"
 import inspectionOfDeviceStep1 from "./inspectionOfDeviceStep1.js"
@@ -26,6 +27,7 @@ import MainMenu from "./MainMenu.js"
 import NextPage3 from "./NextPage3.js"
 
 const turningOnB1200Route = DrawerNavigator({
+    presentations: {screen: presentations},
     turningOnB1200: {screen:turningOnB1200},
     inspectionOfDevice: {screen: inspectionOfDevice},
     inspectionOfDeviceStep1: {screen: inspectionOfDeviceStep1},

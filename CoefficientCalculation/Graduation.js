@@ -847,7 +847,7 @@ export default class Graduation extends Component {
                                 </View>
 
                                 <View style={{flex:1,
-                                    flexDirection: 'row', paddingTop:20}}>
+                                    flexDirection: 'row', paddingTop:'1%'}}>
                                     <Button light style={styles.ButtonCO} onPress={() => this.NumberPress("7")}>
                                         <Text style={styles.NumberText}>7</Text>
                                     </Button>
@@ -882,7 +882,7 @@ export default class Graduation extends Component {
                                 </View>
                                 <View style={{flex:1,
                                     flexDirection: 'row', width: '100%'}}>
-                                    <View style={{ marginBottom: 20, width:'76%'}}>
+                                    <View style={{ marginBottom: 20, width:'76%', marginRight:'1%'}}>
                                         <View style={{flex:1,
                                             flexDirection: 'row', height:25}}>
                                             <Button light style={styles.ButtonCO1} onPress={() => this.NumberPress("1")}>
@@ -1025,6 +1025,13 @@ export default class Graduation extends Component {
                             </View>
                         </Content>
                         <Footer>
+                            <Left>
+                                <Button primary onPress={() => {this.setmodalVisiblePlotCoefficients(!this.state.modalVisiblePlotCoefficients)}}>
+                                    <Text>Назад</Text>
+
+
+                                </Button>
+                            </Left>
                             <Right>
                                 <Button info onPress={() => {this.props.navigation.goBack(null)}}><Text>Завершение</Text></Button>
                             </Right>
@@ -1229,6 +1236,13 @@ export default class Graduation extends Component {
 
                         </Content>
                         <Footer>
+                            <Left>
+                                <Button primary onPress={() => {this.setmodalVisiblePlotEnterStandartSample(!this.state.modalVisiblePlotEnterStandartSample)}}>
+                                    <Text>Назад</Text>
+
+
+                                </Button>
+                            </Left>
                             <Right>
                                 <Button info onPress={() => {this.props.navigation.goBack(null)}}><Text>Завершение</Text></Button>
                             </Right>

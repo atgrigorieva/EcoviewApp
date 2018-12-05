@@ -24,15 +24,15 @@ export default class HomePage extends Component {
 	componentDidMount(){
     Orientation.lockToPortrait();
   }
-	
+
 	render() {
 		//const { navigate } = this.props.navigation.navigate;
 		const { navigate } = this.props.navigation;
 
         const images = [
-            'https://ecoview.ru/templates/ecove1/images/spectron/B-1100_201x170.png',
-            'https://ecoview.ru/templates/ecove1/images/spectron/YF-1800_200.png',
-            'https://ecoview.ru/templates/ecove1/images/spectron/YF-3000_200.png',
+            require('../img/B1100/B-1100_201x170.png'),
+            require('../img/YF1800/YF-1800_200.png'),
+            require('../img/YF3000/YF-3000_200.png'),
         ];
 		
 		return(
@@ -87,7 +87,7 @@ export default class HomePage extends Component {
                             customSlide={({ index, item, style, width }) => (
                                 // It's important to put style here because it's got offset inside
                                 <View key={index} style={[style, styles.customSlide]}>
-                                    <Image source={{ uri: item }} style={styles.customImage} />
+                                    <Image source={item} style={styles.customImage} />
                                 </View>
                             )}
 

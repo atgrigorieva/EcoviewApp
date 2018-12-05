@@ -66,6 +66,11 @@ export default class LampsPage extends Component {
                     </View>
                 </Content>
                 <Footer>
+                    <Left>
+                        <Button transparent onPress={() => this.props.navigation.navigate('Wavelength')}>
+                            <Text>Назад</Text>
+                        </Button>
+                    </Left>
                     <Left><Button onPress={() => this.props.navigation.navigate('MainMenu')}><Text>Главное меню</Text></Button></Left>
                     <Right><Button onPress={() => this.props.navigation.goBack(null)}><Text>К списку презентаций</Text></Button></Right>
                 </Footer>

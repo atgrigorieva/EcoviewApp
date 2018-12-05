@@ -73,7 +73,12 @@ export default class LampsPage extends Component {
                     </View>
                 </Content>
                 <Footer>
-                    <Left><Button onPress={() => this.props.navigation.navigate('Filters')}><Text>Фильтры</Text></Button></Left>
+                    <Left>
+                        <Button transparent onPress={() => this.props.navigation.navigate('NextPage1')}>
+                            <Text>Назад</Text>
+                        </Button>
+                    </Left>
+                    <Body><Button onPress={() => this.props.navigation.navigate('Filters')}><Text>Фильтры</Text></Button></Body>
                     <Right><Button onPress={() => this.props.navigation.goBack(null)}><Text>К списку презентаций</Text></Button></Right>
                 </Footer>
             </Container>

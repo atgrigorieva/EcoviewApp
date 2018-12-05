@@ -70,7 +70,13 @@ export default class LampsPage extends Component {
                     </View>
                 </Content>
                 <Footer>
-                    <Left><Button onPress={() => this.props.navigation.navigate('NextPage3')}><Text>Продолжить</Text></Button></Left>
+                    <Left style={{flex: 1, flexDirection: 'row'}}>
+                        <Button transparent onPress={() => this.props.navigation.navigate('Energy')}>
+                            <Text>Назад</Text>
+                        </Button>
+
+                    <Button  onPress={() => this.props.navigation.navigate('NextPage3')}>
+                        <Text>Продолжить</Text></Button></Left>
                     <Body><Button onPress={() => this.props.navigation.navigate('NextPage1')}><Text>Повторить</Text></Button></Body>
                     <Right><Button onPress={() => this.props.navigation.goBack(null)}><Text>К списку презентаций</Text></Button></Right>
                 </Footer>
