@@ -7,9 +7,9 @@ export default class PDFExample extends React.Component {
     render() {
         ///const source = {uri:'https://ecoview.ru/images/ecove/doc_pdf/Pasport_B-1100.pdf',cache:true};
        /// const source = {uri:'file:///sdcard/Pasport_B-1100.pdf'};
-        const source = require('./Pasport_B-1100.pdf');  // ios only
-        //const source = {uri:'bundle-assets://test.pdf'};
+        //const source = require('./Pasport_B-1100.pdf');  // ios only
 
+        const source = {uri:'bundle-assets://pdf/B-1100/Pasport_B-1100.pdf'};
         //const source = {uri:'file:///sdcard/test.pdf'};
         //const source = {uri:"data:application/pdf;base64,..."};
 

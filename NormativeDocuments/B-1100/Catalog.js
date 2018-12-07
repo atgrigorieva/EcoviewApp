@@ -1,13 +1,18 @@
 import React from 'react';
-import { StyleSheet, Dimensions, View } from 'react-native';
-
+import {NativeModules,
+    Platform, StyleSheet, Dimensions, View } from 'react-native';
+var PSPDFKit = NativeModules.PSPDFKit;
 import Pdf from 'react-native-pdf';
+if (Platform.OS === 'ios') {
+    PSPDFKit.setLicenseKey('INSERT_YOUR_LICENSE_KEY_HERE');
+}
+///const DOCUMENT = Platform.OS === 'ios' ? 'V-UV1100.pdf' : "file:///sdcard/V-UV1100.pdf";
 
 export default class PDFExample extends React.Component {
     render() {
         //const source = {uri:'http://ecoview.ru/images/ecove/doc_pdf/V-UV1100.pdf',cache:true};
-        const source = require('./V-UV1100.pdf');  // ios only
-        //const source = {uri:'bundle-assets://test.pdf'};
+        ///const source = require("V-UV1100.pdf"); // ios only
+        const source = {uri:'bundle-assets://pdf/B-1100/V-UV1100.pdf'};
 
         //const source = {uri:'file:///sdcard/test.pdf'};
         //const source = {uri:"data:application/pdf;base64,..."};
