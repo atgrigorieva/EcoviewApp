@@ -9,17 +9,30 @@ export default class B1100 extends Component{
     super(props);
     this.state = {
       isModalVisible : false,
+        modalVisibleBuy: false,
+        UserName: '', UserCity: '', UserPhone: '', Comment: '',
     };
   }
 
-callFunc(){
-   if(this.isModalVisible){
-     this.setState({isModalVisible:false});
-   }else{
-     this.setState({isModalVisible:true});
-   }
-}
+    callFunc(){
+      if(this.isModalVisible){
+          this.setState({isModalVisible:false});
+      }else{
+          this.setState({isModalVisible:true});
+      }
+  }
+  setmodalVisibleBuy(visible) {
+      this.setState({modalVisibleBuy: visible});
+    }
+    Buy = () => {
 
+        {
+            Linking.openURL('mailto: flora992@mail.ru?subject=Запрос на коммерческое предложение Ecoview&body=Имя пользователя:' +
+                this.state.UserName + "\n Ваш город: " + this.state.UserCity + "\n Телефон для связи: " + this.state.UserPhone +
+                "\n Комментарий: " + this.state.Comment)
+
+        }
+    }
 
 	render() {
 		const state = this.state;
@@ -27,6 +40,7 @@ callFunc(){
 		return(
 			
 			<Container>
+
 				<Header>
         			<Left>
          				<Button transparent onPress={() => this.props.navigation.goBack(null)}>
@@ -42,8 +56,6 @@ callFunc(){
 					<View style={styles.spectr_image}>	
 						<Image source={require('../img/B1100/B-1100_201x170.png')} style={styles.image}/>
 					</View>
-
-          
 					
          
 
@@ -255,7 +267,9 @@ callFunc(){
 
 
 				</Content>
-				<Footer />
+				<Footer>
+                    <Right><Button onPress={() => this.props.navigation.navigate('Buy', {product:'B-1100'})}><Text>КУПИТЬ</Text></Button></Right>
+                </Footer>
 				
 			</Container>
     	);
@@ -283,7 +297,6 @@ var styles = StyleSheet.create({
   package_img:{
     marginTop: 20,
     marginBottom: 20,
-  }
-
+  },
 	
 });

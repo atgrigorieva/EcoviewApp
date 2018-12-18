@@ -9,6 +9,7 @@ import YF3000 from "./YF-3000.js"
 import YF3100 from "./YF-3100.js"
 import YF3200 from "./YF-3200.js"
 import YF6100 from "./YF-6100.js"
+import Buy from "./Buy.js"
 
 const AboutSpectrRouter = DrawerNavigator({
   //Home: { screen: HomePage },
@@ -40,6 +41,9 @@ const AboutSpectrRouter = DrawerNavigator({
     },
     YF6100:{
       screen: YF6100
+    },
+    Buy:{
+        screen: Buy
     },
     ///Profile: { screen: ProfileScreen },
 });

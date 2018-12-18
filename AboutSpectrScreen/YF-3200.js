@@ -279,7 +279,9 @@ callFunc(){
 
 
 				</Content>
-				<Footer />
+                <Footer>
+                    <Right><Button onPress={() => this.props.navigation.navigate('Buy', {product:'УФ-3200'})}><Text>КУПИТЬ</Text></Button></Right>
+                </Footer>
 				
 			</Container>
     	);

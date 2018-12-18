@@ -39,7 +39,7 @@ export default class AboutSpectrScreen extends Component {
 					<Button block light style={styles.button}
                             onPress={() => this.props.navigation.navigate('YF1100')}><Text>УФ-1100</Text></Button>
 					<Button block light style={styles.button}
-                            onPress={() => this.props.navigation.navigate('1200')}><Text>В-1200</Text></Button>
+                            onPress={() => this.props.navigation.navigate('B1200')}><Text>В-1200</Text></Button>
 					<Button block light style={styles.button}
                             onPress={() => this.props.navigation.navigate('YF1200')}><Text>Уф-1200</Text></Button>
 					<Button block light style={styles.button}
